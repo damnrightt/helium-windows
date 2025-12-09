@@ -65,7 +65,7 @@ def main():
               f"{version_parts['HELIUM_PATCH']}.{version_parts['HELIUM_PLATFORM']}"
 
     shutil.copyfile('build/src/out/Default/mini_installer.exe',
-        'build/helium_{}_{}-installer.exe'.format(
+        'build/kelle_browser_{}_{}-installer.exe'.format(
             version, _get_target_cpu(build_outputs)))
 
     timestamp = None
@@ -75,7 +75,7 @@ def main():
     except FileNotFoundError:
         pass
 
-    output = Path('build/helium_{}_{}-windows.zip'.format(
+    output = Path('build/kelle_browser_{}_{}-windows.zip'.format(
         version, _get_target_cpu(build_outputs)))
 
     excluded_files = set([
